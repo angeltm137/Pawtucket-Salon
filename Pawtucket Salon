@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawtucket Salon</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        header {
+            background: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        section {
+            padding: 20px;
+            margin: 20px auto;
+            background: #fff;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            width: 80%;
+        }
+        h1, h2 {
+            text-align: center;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Pawtucket Salon</h1>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#booking">Online Booking</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#about">About Us</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <!-- Home Page -->
+    <section id="home">
+        <h2>Welcome to Pawtucket Salon</h2>
+        <p>Your go-to destination for premium hair styling, cutting, and coloring services. Book your appointment online and experience the best in beauty and care!</p>
+        <button onclick="location.href='#booking'">Book an Appointment</button>
+    </section>
+
+    <!-- Online Booking Page -->
+    <section id="booking">
+        <h2>Online Booking</h2>
+        <p>Select your service, preferred stylist, and a convenient time slot. Manage your bookings effortlessly!</p>
+        <form action="submit_booking.php" method="post">
+            <label for="service">Select Service:</label><br>
+            <select id="service" name="service" required>
+                <option value="haircut">Haircut</option>
+                <option value="coloring">Coloring</option>
+                <option value="styling">Styling</option>
+            </select><br><br>
+
+            <label for="stylist">Select Stylist:</label><br>
+            <select id="stylist" name="stylist" required>
+                <option value="stylist1">Stylist 1</option>
+                <option value="stylist2">Stylist 2</option>
+            </select><br><br>
+
+            <label for="date">Select Date:</label><br>
+            <input type="date" id="date" name="date" required><br><br>
+
+            <label for="time">Select Time:</label><br>
+            <input type="time" id="time" name="time" required><br><br>
+
+            <button type="submit">Book Now</button>
+        </form>
+    </section>
+
+    <!-- Services Page -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li><strong>Haircut:</strong> Expert cuts tailored to your style.</li>
+            <li><strong>Coloring:</strong> Vibrant colors to match your personality.</li>
+            <li><strong>Styling:</strong> Perfect styles for every occasion.</li>
+        </ul>
+    </section>
+
+    <!-- About Us Page -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Pawtucket Salon is dedicated to providing exceptional beauty services in a relaxing and friendly environment. Our talented team of stylists is here to bring out the best in you.</p>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2024 Pawtucket Salon | All Rights Reserved</p>
+</footer>
+
+</body>
+</html>
